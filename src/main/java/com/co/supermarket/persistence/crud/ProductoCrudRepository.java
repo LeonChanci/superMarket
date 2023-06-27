@@ -15,7 +15,6 @@ public interface ProductoCrudRepository extends CrudRepository<Producto, Integer
      */
     //QUERY METHOD -> Ordenados por nombre ascendente
     List<Producto> findByIdCategoriaOrderByNombreAsc(int idCategoria);
-
     //QUERY NATIVO
     //@Query(value = "SELECT * FROM productos WHERE id_categoria = ?", nativeQuery = true)
     //List<Producto> getProductsByIdCategoria(int idCategoria);
