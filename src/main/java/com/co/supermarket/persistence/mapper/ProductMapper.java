@@ -8,7 +8,6 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
 import java.util.List;
-
 //uses =  {CategoryMapper.class} -> para cuando se mapea la categoría use el CategoryMapper existente
 @Mapper(componentModel = "spring", uses =  {CategoryMapper.class})
 public interface ProductMapper {
@@ -27,5 +26,6 @@ public interface ProductMapper {
     @InheritInverseConfiguration
     //Ignorar el camp codigoBarras que si está en Producto.entity
     @Mapping(target = "codigoBarras", ignore = true)
+    @Mapping(target = "productos", ignore = true)
     Producto toProducto(Product product);
 }
