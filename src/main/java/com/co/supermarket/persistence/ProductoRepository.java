@@ -5,6 +5,7 @@ import com.co.supermarket.domain.repository.ProductRepository;
 import com.co.supermarket.persistence.crud.ProductoCrudRepository;
 import com.co.supermarket.persistence.entity.Producto;
 import com.co.supermarket.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +14,10 @@ import java.util.Optional;
 //Con @Repository indicamos a Spring que esta clase interactúa con la BD
 @Repository
 public class ProductoRepository implements ProductRepository {
+    //Inyección de Dependencias
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+    @Autowired
     private ProductMapper mapper;
 
     /**
