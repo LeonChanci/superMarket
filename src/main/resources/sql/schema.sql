@@ -1,3 +1,5 @@
+-- POSTGRESQL --
+
 -- -----------------------------------------------------
 -- Table "CATEGORIAS"
 -- -----------------------------------------------------
@@ -78,3 +80,13 @@ CREATE TABLE  COMPRAS_PRODUCTOS (
     REFERENCES COMPRAS ("id_compra")
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+
+
+
+
+
+
+-- MYSQL --
+
+-- COMPRA
+INSERT INTO compras VALUES (1, '4546221', TIMESTAMP('1992-10-08 17:30:00'), 'E', '', 'P');
