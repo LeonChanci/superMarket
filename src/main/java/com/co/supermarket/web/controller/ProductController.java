@@ -3,14 +3,14 @@ package com.co.supermarket.web.controller;
 import com.co.supermarket.domain.Product;
 import com.co.supermarket.domain.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 //Controlador de una API Rest
 @RestController
+
 //Path o URL para hacer las peticiones
 @RequestMapping("/products")
 public class ProductController {
@@ -18,22 +18,28 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    @GetMapping("/all")
     public List<Product> getAll(){
         return productService.getAll();
     }
-
-    public Optional<Product> getProduct(int productId) {
+    @GetMapping("/{id}")
+    //@PathVariable -> {id} -> Cuando se le pasa como parámetro en la URL (Ejm: /products/20)
+    public Optional<Product> getProduct(@PathVariable("id") int productId) {
         return productService.getProduct(productId);
     }
-    public Optional<List<Product>> getByCategory(int categoryId){
+    @GetMapping("/forCategory/{categoryid}")
+    public Optional<List<Product>> getByCategory(@PathVariable("categoryid") int categoryId){
         return productService.getByCategory(categoryId);
     }
 
-    public Product save(Product product){
+    @PostMapping("/save")
+    //@RequestBody -> Para determinar que el parámetro es parte del cuerpo de la petición (hace parte del Body->row)
+    public Product save(@RequestBody Product product){
         return productService.save(product);
     }
 
-    public boolean delete(int idProduct){
-        return productService.delete(idProduct);
+    @DeleteMapping("/delete/{id}")
+    public boolean delete(@PathVariable("id") int productId){
+        return productService.delete(productId);
     }
 }
