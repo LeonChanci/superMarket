@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface ProductRepository {
 
     /**
-     * Obtener una lista de Products que sean de una Category especifica
+     * Obtener una lista de Products
      */
     List<Product> getAll();
 

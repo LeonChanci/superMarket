@@ -26,6 +26,6 @@ public interface ProductMapper {
     @InheritInverseConfiguration
     //Ignorar el camp codigoBarras que si está en Producto.entity
     @Mapping(target = "codigoBarras", ignore = true)
-    @Mapping(target = "productos", ignore = true)
+    @Mapping(target = "comprasProducto", ignore = true)
     Producto toProducto(Product product);
 }
