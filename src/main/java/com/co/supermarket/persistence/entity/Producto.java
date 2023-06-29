@@ -38,5 +38,5 @@ public class Producto {
     private Categoria categoria;
 
     @OneToMany(mappedBy = "producto")
-    private List<ComprasProducto> productos;
+    private List<ComprasProducto> comprasProducto;
 }
