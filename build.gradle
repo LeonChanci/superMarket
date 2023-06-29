@@ -20,9 +20,11 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
-	//runtimeOnly 'org.postgresql:postgresql'
-	runtimeOnly 'com.mysql:mysql-connector-j'
+	//PostgreSQL
+	runtimeOnly 'org.postgresql:postgresql'
 
+	//MySQL
+	//runtimeOnly 'com.mysql:mysql-connector-j'
 
 	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
