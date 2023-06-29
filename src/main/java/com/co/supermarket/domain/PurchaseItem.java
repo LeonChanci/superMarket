@@ -12,4 +12,5 @@ public class PurchaseItem {
     private int quantity;
     private double total;
     private boolean active;
+
 }

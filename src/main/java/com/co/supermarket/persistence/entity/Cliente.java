@@ -14,7 +14,7 @@ public class Cliente {
 
     @Id
     @Column(name = "id")
-    private Integer identificacion;
+    private String identificacion;
 
     private String nombre;
 

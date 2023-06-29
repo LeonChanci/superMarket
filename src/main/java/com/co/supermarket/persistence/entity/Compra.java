@@ -28,7 +28,7 @@ public class Compra {
 
     private String comentario;
 
-    private Boolean estado;
+    private String estado;
 
     @ManyToOne
     @JoinColumn( name = "id_cliente", referencedColumnName = "id", insertable = false, updatable = false)
