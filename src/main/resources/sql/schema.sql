@@ -36,7 +36,7 @@ CREATE TABLE  CLIENTES (
   "id" VARCHAR(20) NOT NULL,
   "nombre" VARCHAR(40) NULL,
   "apellidos" VARCHAR(100) NULL,
-  "celular" NUMERIC NULL,
+  "celular" VARCHAR (12) NULL,
   "direccion" VARCHAR(80) NULL,
   "correo_electronico" VARCHAR(70) NULL,
   PRIMARY KEY ("id"));
@@ -121,7 +121,7 @@ CREATE TABLE  CLIENTES (
   id VARCHAR(20) NOT NULL,
   nombre VARCHAR(40) NULL,
   apellidos VARCHAR(100) NULL,
-  celular NUMERIC NULL,
+  celular VARCHAR(12) NULL,
   direccion VARCHAR(80) NULL,
   correo_electronico VARCHAR(70) NULL,
   PRIMARY KEY (id));
